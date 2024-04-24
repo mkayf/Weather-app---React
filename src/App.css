@@ -1,0 +1,115 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+  text-transform: capitalize;
+  color: #fff;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  background-color: #333d4b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-div{
+ display: flex; 
+ justify-content: center;
+ align-items: center;
+}
+.current-weather{
+  /* border: 2px solid red; */
+  width: 300px;
+  height: 400px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right,rgba(5, 203, 238, 0.637), rgba(7, 47, 244, 0.337)), url('./assets/images/current_weather.jpg');
+  background-position: center bottom;  
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: -1px 2px 12px 3px #00000033;
+}
+.top-data{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.top-data .week-day{
+  font-size: 2rem;
+}
+.top-data .date-div{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.bottom-data .temperature{
+  font-size: 4rem;
+}
+.forecast-weather{
+  background-color: #22272d;
+  border-top-right-radius: 25px;  
+  border-bottom-right-radius: 25px;  
+  padding: 25px;
+  height: 350px;
+  width: 350px;
+  box-shadow: 1px 2px 12px 3px #00000033;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* align-items: flex-start; */
+}
+.fore-top{
+  display: grid;
+grid-template-columns: repeat(2, 1fr);
+grid-template-rows: repeat(3, 1fr);
+grid-column-gap: 50%;
+grid-row-gap: 10px;
+}
+.fore-top span{
+  color: #ccc;
+}
+.fore-middle{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.fore-middle div{
+  /* flex-basis: 33.33%; */
+  width: 100px;
+  height: 120px;
+  background-color: #2a3145;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.fore-bottom{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.fore-bottom input{
+
+  font-size: 1rem;
+  border-radius: 50px;
+  width: 250px;
+  outline: none;
+  border: none;
+  padding: 15px;
+  background: linear-gradient(to bottom right,rgba(5, 203, 238, 0.793), rgba(7, 47, 244, 0.337));
+}
+.fore-bottom img{
+  filter: invert(1);
+  position: absolute;
+  right: 40px;
+}
