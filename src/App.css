@@ -48,8 +48,17 @@ body{
   flex-direction: column;
   gap: 5px;
 }
+.bottom-data{
+  position: relative;
+  bottom: 20px;
+}
 .bottom-data .temperature{
   font-size: 4rem;
+  /* position: relative; */
+  /* bottom: 20px; */
+}
+.bottom-data .weather-type-icon{
+ margin: 10px 0;
 }
 .forecast-weather{
   background-color: #22272d;
