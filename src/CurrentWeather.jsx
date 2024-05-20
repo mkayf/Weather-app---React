@@ -1,12 +1,13 @@
 import React from 'react'
 
 const CurrentWeather = () => {
+  // console.log(currentDetails);
   return (
     <div className='current-weather'>
         <div className="top-data">
           <div className="date-div">
             <h2 className='week-day'>Wednesday</h2>
-            <p className='date'>April 24, 2024 <span>5:31 PM</span></p>
+            <p className='date'>April 24, 2024</p>
             </div>
             <p className='location'>Karachi, Pakistan</p>
         </div>

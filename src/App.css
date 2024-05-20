@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "League Spartan", sans-serif;
-  text-transform: capitalize;
+  /* text-transform:   capitalize; */
   color: #fff;
 }
 body{
@@ -99,7 +99,6 @@ grid-row-gap: 10px;
   position: relative;
 }
 .fore-bottom input{
-
   font-size: 1rem;
   border-radius: 50px;
   width: 250px;
@@ -108,8 +107,19 @@ grid-row-gap: 10px;
   padding: 15px;
   background: linear-gradient(to bottom right,rgba(5, 203, 238, 0.793), rgba(7, 47, 244, 0.337));
 }
+::placeholder{
+  color: white;
+  opacity: 1;
+}
+::ms-input-placeholder{
+  color: white;
+}
 .fore-bottom img{
   filter: invert(1);
   position: absolute;
   right: 40px;
+  cursor: pointer;
+}
+.forecast-temp{
+  font-size: 0.9rem;
 }
