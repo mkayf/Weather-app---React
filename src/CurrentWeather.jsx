@@ -1,9 +1,10 @@
 import React from 'react'
 
-const CurrentWeather = ({currentDetails}) => {
+const CurrentWeather = ({currentDetails, Preloader}) => {
   
   return (
     <div className='current-weather'>
+      {Preloader && <Preloader/>}
         <div className="top-data">
           <div className="date-div">
             <h2 className='week-day'>{currentDetails ? currentDetails.weekday : ''}</h2>

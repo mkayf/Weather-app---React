@@ -4,6 +4,7 @@ import CurrentWeather from './CurrentWeather'
 import ForecastWeather from './ForecastWeather'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer, toast } from 'react-toastify';
+import Preloader from './Preloader';
 const App = () => {
   // http://api.weatherapi.com/v1/forecast.json?key=e5583ddc48ce44858a8145320242404&q=Karachi&days=8&aqi=no&alerts=no
 
@@ -84,7 +85,7 @@ theme: "dark"
     <div className="main-div">
       <ToastContainer/>
       {
-        (loading) ? <> <CurrentWeather currentDetails={null}/> <ForecastWeather forecastDetails={null} setCity={null}/> </> : <> <CurrentWeather currentDetails={currentWeather}/> 
+        (loading) ? <> <CurrentWeather currentDetails={null} Preloader={Preloader} /> <ForecastWeather forecastDetails={null} setCity={null}/> </> : <> <CurrentWeather currentDetails={currentWeather}/> 
         <ForecastWeather forecastDetails={forecastWeather} city={city} setCity={setCity}/>
         </>
       }
