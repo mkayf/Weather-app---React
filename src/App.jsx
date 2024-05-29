@@ -29,7 +29,6 @@ theme: "dark"
       fetch(`http://api.weatherapi.com/v1/forecast.json?key=e5583ddc48ce44858a8145320242404&q=${city}&days=8&aqi=no&alerts=no`)
     .then((response) => response.json())
     .then((response) => {
-        try {
           let weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
       let dateObj = new Date(response.location.localtime);
       const options = {
@@ -70,11 +69,11 @@ theme: "dark"
       setCurrentWeather(weatherObj);
       setForecastWeather(weatherObj);
       setLoading(false);    
-        } catch (error) {
-          invalidLocation();
-        }
-      
-    })
+           
+    }).catch((error)=>{
+      invalidLocation();
+      setLoading(false);
+    })  
     
     }, [city])
     

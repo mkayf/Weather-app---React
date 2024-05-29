@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-const ForecastWeather = ({forecastDetails, setCity}) => {
+const ForecastWeather = ({forecastDetails, setCity = ''}) => {
     const [inputValue, setInputValue] = useState('');
 
   const handleSubmit = (event) => { 
-      setCity(inputValue);
+    setCity(inputValue);
     event.preventDefault();
   }
 
@@ -34,10 +34,10 @@ const ForecastWeather = ({forecastDetails, setCity}) => {
         </div>
         <div className="fore-bottom">
           <form onSubmit={handleSubmit}>
-            <input type="text" placeholder='Search City' name='search' value={inputValue} onChange={(e)=>{setInputValue(e.target.value)}}
-            /> 
-          </form>
+            <input type="text" placeholder='Search City' name='search' value={inputValue} onChange={(e)=>{setInputValue(e.target.value)}} />
+            </form>
           <img src="src\assets\images\search-icon.png" alt="" width={"15px"} onClick={handleSubmit}/>
+
         </div>
     </div>
   )
