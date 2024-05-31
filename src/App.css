@@ -21,6 +21,7 @@ body{
  align-items: center;
 }
 
+
 /* current weather component styling */
 .current-weather{
   width: 300px;
@@ -68,6 +69,14 @@ body{
 
 /* forecast weather component styling */
 
+.logo{
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.logo span{
+  color: rgba(5, 203, 238, 0.793);
+}
 .forecast-weather{
   background-color: #22272d;
   border-top-right-radius: 25px;  

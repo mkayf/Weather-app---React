@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
 const ForecastWeather = ({forecastDetails, setCity = ''}) => {
     const [inputValue, setInputValue] = useState('');
 
@@ -10,6 +9,7 @@ const ForecastWeather = ({forecastDetails, setCity = ''}) => {
 
   return (
     <div className='forecast-weather'>
+        <h2 className='logo'>weather<span>fusion</span></h2>
         <div className="fore-top">
           <p>Feels like</p><span className='feel-temp'>{forecastDetails ? forecastDetails.feels_like + '°C' : ''}</span>
           <p>Wind</p><span className='wind-speed'>{forecastDetails ? forecastDetails.wind + 'KM/h' : ''}</span>
