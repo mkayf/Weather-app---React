@@ -13,7 +13,7 @@ const App = () => {
   let [forecastWeather, setForecastWeather] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const invalidLocation = () => toast.error("Invalid location",{
+  const invalidLocation = () => toast.error("No data found!",{
     position: "top-right",
 autoClose: 5000,
 hideProgressBar: false,
